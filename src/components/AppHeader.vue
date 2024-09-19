@@ -9,6 +9,10 @@ export default {
 </script>
 
 <template>
+
+  <div class="bg-header">
+
+  </div>
   <header>
     <div class="header-top d-flex justify-content-between align-items-center p-5">
       <div class="logo-header d-flex align-items-center">
@@ -99,69 +103,64 @@ export default {
         
       </div>
       
-      <div class="d-flex flex-column button-right">
-        <button class="p-2 text-secondary border-0 rounded-2 mb-2">
-
-          <i class="fa-solid fa-folder"></i>
-
-          <div>
-            Prebuilts
-          </div>
-
-        </button>
-
-        <button class="p-2 text-secondary border-0 rounded-2">
-
-          <i class="fa-solid fa-cart-shopping"></i>
-
-          <div>
-            Buy Now
-          </div>
-        </button>
-      </div>
+     
     </div>
     
   </header>
 </template>
 
 <style lang="scss" scoped>
+.bg-header{
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../pubblic/img/HelloIMG1669149393797.jpeg');
+  background-size: cover; 
+  
+}
 
 header{
 
-  background-image: url('../pubblic/img/HelloIMG1669149393797.jpeg');
   width: 100%;
   height: 100vh;
-  background-size: cover;
 
-  .list-page{
+  .header-top{
+    width: 90%;
+    margin: 0 auto;
+    .list-page{
 
-    ul{
-      list-style: none;
-      margin-bottom: 0;
-      li{
-        padding:10px 30px;
+      ul{
+        list-style: none;
+        margin-bottom: 0;
+        li{
+          padding:10px 30px;
 
-        a{
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
+          a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
 
-          &:hover{
+            &:hover{
 
-            color: $my-yellow;
+              color: $my-yellow;
 
-            &.button{
-              color: white;
+              &.button{
+                color: white;
 
+              }
             }
           }
         }
       }
-    }
-    .my-btn{
-      background-color: $my-yellow;
-    }
+      .my-btn{
+        background-color: $my-yellow;
+      }
+    }   
   }
+  
 
   .header-bottom{
 
@@ -216,12 +215,7 @@ header{
 
       }
       
-    }.button-right{
-        position: absolute;
-        top: 0;
-        right:20px;
-        
-      }
+    }
   }
 }
 </style>
