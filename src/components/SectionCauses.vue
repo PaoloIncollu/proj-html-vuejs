@@ -148,7 +148,6 @@ section{
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background-color: rgba($color: $my-yellow, $alpha: 0.6);
                     width: 100%;
                     height: 100%;
 
@@ -158,10 +157,17 @@ section{
 
                 background:none;
                 border: none;
-                &:hover .card-hover{
-                     
+                img{
+
+                    width: 100%;
+                    height: 100%;
                     display: block;
-                    
+                }
+                
+                &:hover .card-hover{
+
+                    display: block;
+                    background-color: rgba($color: $my-yellow, $alpha: 0.7);
                 }
 
             }
