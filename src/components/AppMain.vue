@@ -1,23 +1,32 @@
 <script>
+import SectionCounts from './SectionCounts.vue';
+import SectionCauses from './SectionCauses.vue';
+import SectionValues from './SectionValues.vue';
+import SectionArticles from './SectionArticles.vue';
 export default {
   data() {
     return { 
       
     }
+  },
+  components:{
+
+    SectionCounts,
+    SectionCauses,
+    SectionValues,
+    SectionArticles
   }
 }
 </script>
 
 <template>
  <main>
-  <section class="d-flex">
-    <div class="left">
 
-    </div>
-    <div class="right">
-
-    </div>
-  </section>
+  <SectionCounts/>
+  <SectionCauses/>
+  <SectionValues/>
+  <SectionArticles/>
+  
  </main>
 </template>
 
@@ -26,20 +35,5 @@ export default {
 main{
 
   width: 100%;
-  section{
-    width: 100%;
-    height: 100vh;
-
-    .left{
-      background-color: white;
-      width: 75%;
-    }
-    .right{
-
-      background-color: #ED6967;
-      width: 25%;
-    }   
-  }
-  
 }
 </style>

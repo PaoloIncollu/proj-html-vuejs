@@ -207,7 +207,7 @@ header{
           border: 1px solid $my-yellow;
           &:hover{
 
-            background-color: #262E44;
+            background-color: $my-dark-blue;
             color: white;
             border-color: white;
           }
