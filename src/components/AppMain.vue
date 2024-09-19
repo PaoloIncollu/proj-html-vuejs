@@ -23,8 +23,8 @@ export default {
  <main>
 
   <SectionCounts/>
-  <SectionCauses/>
   <SectionValues/>
+  <SectionCauses/>
   <SectionArticles/>
   
  </main>

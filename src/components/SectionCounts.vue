@@ -97,11 +97,12 @@ export default {
 
 section{
     width: 100%;
-    height: 70vh;
+    
     
     .container-left{
         background-color: white;
         width: 65%;
+        padding-bottom: 50px;
         
         .left{
 
