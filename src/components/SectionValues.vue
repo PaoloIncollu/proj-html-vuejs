@@ -74,7 +74,6 @@ export default {
 
 section{
     width: 100%;
-    height: 100vh;
     background-image: url('https://avada.website/charity/wp-content/uploads/sites/72/2016/08/home-content-bg-2.jpg');
     background-size: cover;
     background-position: bottom;
