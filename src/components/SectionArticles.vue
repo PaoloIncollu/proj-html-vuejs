@@ -2,6 +2,34 @@
 export default {
   data() {
     return { 
+        articles:[
+            {
+                id:'1',
+                title:'The Human Story Of Uniqueness',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1444664597500-035db93e2323-200x150.jpg',
+                text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prasent ac nibh vestibulum, laoreet ipsum.'
+            },
+            {
+                id:'2',
+                title:'Sustainable Trade Tactics',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1447430617419-95715602278e-200x150.jpg',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            },
+            {
+                id:'3',
+                title:'Farmers Making A Difference',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1460230525622-630fe3294cd7-200x150.jpg',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            },
+            {
+                id:'4',
+                title:'Meeting Remote Tribes In Peru',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1460600421604-5e138c208b9c-200x150.jpg',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            }
+
+        ]
+      
       
     }
   }
@@ -25,9 +53,9 @@ export default {
         </span>    
     </div>
 
-    <div class="my-row d-flex">
+    <div class="my-row d-flex flex-wrap">
 
-        <div class="w-50">
+        <div class="col-sm-12 col-md-12 col-lg-6 pb-5 pe-3">
             <div class="card">
                 <img src="../pubblic/img/HelloIMG1669149322752.jpeg" class="card-img-top" alt="...">
                 <div class="card-body pt-5">
@@ -42,17 +70,17 @@ export default {
             </div>
         </div>
 
-        <div class="w-50 right">
+        <div class="col-sm-12 col-md-12 col-lg-6 right">
 
-            <div class="d-flex mb-5">
+            <div v-for="(article,i) in this.articles" :key="i" class="d-flex mb-5">
 
-                <div class="mx-5 w-25">
-                    <img src="https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1444664597500-035db93e2323-200x150.jpg" alt="">
+                <div class="me-5 w-25">
+                    <img :src="article.img" alt="">
                 </div>
                 <div>
                     <h3>
                         <a href="#">
-                            The human story of uniqueness
+                            {{article.title}}
                         </a>
                         
                     </h3>
@@ -62,62 +90,7 @@ export default {
                     </span>
                 </div>
             </div>
-            <div class="d-flex mb-5">
-
-                <div class="mx-5 w-25">
-                    <img src="https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1447430617419-95715602278e-200x150.jpg" alt="">
-                </div>
-                <div>
-                    <h3>
-                        <a href="#">
-                            Sustainable Trade Tactics
-                        </a>
-                        
-                    </h3>
-
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prasent ac nibh vestibulum, laoreet ipsum.
-                    </span>
-                </div>
-            </div>
-
-            <div class="d-flex mb-5">
-
-                <div class="mx-5 w-25">
-                    <img src="https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1460230525622-630fe3294cd7-200x150.jpg" alt="">
-                </div>
-                <div>
-                    <h3>
-                        <a href="#">
-                            Farmers Making A Difference
-                        </a>
-                        
-                    </h3>
-
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prasent ac nibh vestibulum, laoreet ipsum.
-                    </span>
-                </div>
-            </div>
-
-            <div class="d-flex mb-5">
-
-                <div class="mx-5 w-25">
-                    <img src="https://avada.website/charity/wp-content/uploads/sites/72/2016/08/photo-1460600421604-5e138c208b9c-200x150.jpg" alt="">
-                </div>
-                <div>
-                    <h3>
-                        <a href="#">
-                            Meeting Remote Tribes In Peru
-                        </a>
-                        
-                    </h3>
-
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prasent ac nibh vestibulum, laoreet ipsum.
-                    </span>
-                </div>
-            </div>
+            
         </div>
 
 
@@ -183,6 +156,7 @@ section{
 
         .right{
 
+
             img{
                 width: 150px;
                 height: 150px;
@@ -200,6 +174,7 @@ section{
     
     
   }
+
   
 
 </style>

@@ -1,7 +1,30 @@
 <script>
 export default {
   data() {
-    return { 
+    return {
+        cards:[
+            {
+                id:'1',
+                title:'Fair trade',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/avada-charity-fair-trade-featured.jpg'
+            },
+            {
+                id:'2',
+                title:'Shelter',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/avada-charity-shelter-featured.jpg'
+            },
+            {
+                id:'3',
+                title:'Farming',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/avada-charity-farming-featured.jpg'
+            },
+            {
+                id:'4',
+                title:'Vaccines',
+                img:'https://avada.website/charity/wp-content/uploads/sites/72/2016/08/avada-charity-vaccines-featured.jpg'
+            }
+
+        ]
       
     }
   }
@@ -29,69 +52,30 @@ export default {
         </div>
 
         <div class="my-row row">
-            <div class="my-card card col-sm-6 col-md-4 col-lg-3">
+
+            <div v-for="(card,i) in this.cards" :key="i" class="my-card card col-sm-6 col-md-4 col-lg-3">
+
+                <div  class="container-card">
+
                 <div class="my-img-card">
-                    <img src="../pubblic/img/HelloIMG1669149317319.jpeg"  alt="...">    
+                    <img :src="card.img"  alt="...">    
                 </div>
 
+                <div class="card-hover card text-uppercase ">
+
+                    <h4 class="text-center text-white text-uppercase">
+
+                        {{card.title}}
+
+                    </h4>
+
+                </div>    
+            </div>
                 
-
-            
-
-            <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
-
-                <h4 class="text-center text-white text-uppercase">
-
-                    Fair trade
-
-                </h4>
-
-            </div>
             
             
             </div>
-            <div class="my-card card col-sm-6 col-md-4 col-lg-3">
-                <img src="../pubblic/img/HelloIMG1669149318263.jpeg" alt="...">
-
-                <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
-
-                    <h4 class="text-center text-white text-uppercase">
-
-                        Shelter
-
-                    </h4>
-
-                </div>
             
-            </div>
-            <div class="my-card card col-sm-6 col-md-4 col-lg-3">
-                <img src="../pubblic/img/HelloIMG1669149319450.jpeg" alt="...">
-
-                <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
-
-                    <h4 class="text-center text-white text-uppercase">
-
-                        Farming
-
-                    </h4>
-
-                </div>
-                                
-            </div>
-            <div class="my-card card col-sm-6 col-md-4 col-lg-3">
-                <img src="../pubblic/img/HelloIMG1669149321401.jpeg" alt="...">
-
-                <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
-
-                    <h4 class="text-center text-white text-uppercase">
-
-                        Vaccines
-
-                    </h4>
-
-                </div>
-            
-            </div>
         </div>
 
     </div>
@@ -148,48 +132,55 @@ section{
                 background:none;
                 border: none;
                 margin-bottom: 10px;
-                img{
+
+                .container-card{
+
+                    position: relative;
+
+                    img{
                     border-radius: 5px;
                     width: 100%;
                     height: 100%;
                     display: block;
                     
-                }
+                    }
                 
 
-                .card-hover{
+                    .card-hover{
 
-                    display: none;
-                    position: absolute;
-                    top: 0;
-                    left: 3%;
-                    width: 94%;
-                    height: 100%;
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        
 
-                    h4{
-                        margin-top:calc(50% - 50px);
-                        line-height: 20px;
+                        h4{
+                            margin-top:calc(50% - 50px);
+                            line-height: 20px;
+                            
+                        }
+                    
                         
                     }
                     
-                    
+                    &:hover .card-hover{
+
+                        display: block;
+                        align-items: center;
+                        background-color: rgba($color: $my-yellow, $alpha: 0.7);
+                    }
+                
+                
+
                 }
                 
-                &:hover .card-hover{
 
-                    display: block;
-                    align-items: center;
-                    background-color: rgba($color: $my-yellow, $alpha: 0.7);
-                }
-
-            }
             }
         }
-
     }
-
     
-
     .bottom-section{
         position: absolute;
         bottom: 0;
@@ -214,7 +205,7 @@ section{
 
     }
 
-
+}
   
   
 

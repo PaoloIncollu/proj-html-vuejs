@@ -2,6 +2,33 @@
 export default {
   data() {
     return { 
+        values:[
+            {
+                id:'1',
+                title:'Clean Water',
+                icon:'fa-solid fa-droplet',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            },
+            {
+                id:'2',
+                title:'Vaccinations',
+                icon:'fa-solid fa-stethoscope',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            },
+            {
+                id:'3',
+                title:'Education',
+                icon:'fa-solid fa-graduation-cap',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            },
+            {
+                id:'4',
+                title:'Farming',
+                icon:'fa-brands fa-pagelines',
+                text:'Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.'
+            }
+
+        ]
       
     }
   }
@@ -29,38 +56,15 @@ export default {
         </div>
 
         <div class="my-row row">
-            <div class="my-card card text-center col-sm-6 col-md-4 col-lg-3">
-                <i class="fa-solid fa-droplet"></i>
+            <div v-for="(value,i) in this.values" :key="i" class="my-card card text-center col-sm-6 col-md-4 col-lg-3">
+                <i :class="value.icon"></i>
                 <div class="card-body text-white">
-                    <h5 class="card-title">Clean Water</h5>
-                    <p class="card-text">Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.</p>
+                    <h5 class="card-title">{{value.title}}</h5>
+                    <p class="card-text">{{ value.text }}</p>
                     <a href="#" class="btn my-btn text uppercase">Learn more</a>
                 </div>
             </div>
-            <div class="my-card card text-center col-sm-6 col-md-4 col-lg-3">
-                <i class="fa-solid fa-stethoscope"></i>
-                <div class="card-body text-white">
-                    <h5 class="card-title">Vaccination</h5>
-                    <p class="card-text">Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.</p>
-                    <a href="#" class="btn my-btn text uppercase">Learn more</a>
-                </div>
-            </div>
-            <div class="my-card card text-center col-sm-6 col-md-4 col-lg-3">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <div class="card-body text-white">
-                    <h5 class="card-title">Education</h5>
-                    <p class="card-text">Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.</p>
-                    <a href="#" class="btn my-btn text uppercase">Learn more</a>
-                </div>
-            </div>
-            <div class="my-card card text-center col-sm-6 col-md-4 col-lg-3">
-                <i class="fa-brands fa-pagelines"></i>
-                <div class="card-body text-white">
-                    <h5 class="card-title">Farming</h5>
-                    <p class="card-text">Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.</p>
-                    <a href="#" class="btn my-btn text uppercase">Learn more</a>
-                </div>
-            </div>
+            
         </div>
 
         

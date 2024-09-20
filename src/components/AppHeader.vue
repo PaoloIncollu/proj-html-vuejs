@@ -15,11 +15,17 @@ export default {
   </div>
   <header>
     <div class="header-top d-flex justify-content-between align-items-center p-5">
+
+      
       <div class="logo-header d-flex align-items-center">
-        <img src="../pubblic/img/HelloIMG1669149314369.png" alt="Avada Chiarity">
+        <img class="logo-small"  src="../pubblic/img/Logo-small.png" alt="Avada Chiarity">
+      
+        <h3 class="text-uppercase text-white ps-2">Avada Charity</h3>
       </div>
+
+        
       <div class="list-page d-flex align-items-center">
-        <ul class="d-flex align-items-center">
+        <ul class="d-flex flex-wrap align-items-center">
           <li class="text-uppercase">
 
             <a href="#">
@@ -76,9 +82,9 @@ export default {
 
         </p>
 
-        <div>
+        <div class="d-flex flex-wrap justify-content-center">
 
-          <span class="text-uppercase my-btn-mission">
+          <span class="text-uppercase my-btn-mission me-2">
 
             <a href="#">
 
@@ -87,7 +93,7 @@ export default {
             </a>
             
           </span>
-
+          
           <span class="text-uppercase my-btn-donate">
 
             <a href="#">
@@ -96,8 +102,8 @@ export default {
 
             </a>
             
-          </span>
-        
+          </span>  
+          
         </div>
 
         
@@ -128,8 +134,9 @@ header{
   padding-bottom:200px ;
 
   .header-top{
-    width: 90%;
-    margin: 0 auto;
+      
+    
+    
     .list-page{
 
       ul{
@@ -173,7 +180,7 @@ header{
 
       h1{
 
-        font-size: 100px;
+        font-size: 50px;
       }
 
       p{
@@ -186,7 +193,6 @@ header{
           color: white;
           text-decoration: none;
           padding: 10px 20px;
-          margin-right: 20px;
           border: 1px solid white;
           &:hover{
 
@@ -218,4 +224,33 @@ header{
     }
   }
 }
+
+@media only screen and (max-width:1100px){
+
+  .header-top{
+
+    .logo-header{
+      h3{
+        display: none;
+      }
+    }
+
+  }
+  
+  
+
+}
+
+@media only screen and (max-width:796px){
+
+  .logo-small{
+
+    display: none;
+  }
+
+    
+  
+}
+
+
 </style>
