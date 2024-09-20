@@ -30,14 +30,17 @@ export default {
 
         <div class="my-row row">
             <div class="my-card card col-sm-6 col-md-4 col-lg-3">
+                <div class="my-img-card">
+                    <img src="../pubblic/img/HelloIMG1669149317319.jpeg"  alt="...">    
+                </div>
 
-                <img src="../pubblic/img/HelloIMG1669149317319.jpeg"  alt="...">
+                
 
             
 
             <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
 
-                <h4 class="text-center text-white">
+                <h4 class="text-center text-white text-uppercase">
 
                     Fair trade
 
@@ -52,9 +55,9 @@ export default {
 
                 <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
 
-                    <h4 class="text-center text-white">
+                    <h4 class="text-center text-white text-uppercase">
 
-                        Fair trade
+                        Shelter
 
                     </h4>
 
@@ -66,9 +69,9 @@ export default {
 
                 <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
 
-                    <h4 class="text-center text-white">
+                    <h4 class="text-center text-white text-uppercase">
 
-                        Fair trade
+                        Farming
 
                     </h4>
 
@@ -80,9 +83,9 @@ export default {
 
                 <div class="my-card card-hover card col-sm-6 col-md-4 col-lg-3 text-uppercase ">
 
-                    <h4 class="text-center text-white">
+                    <h4 class="text-center text-white text-uppercase">
 
-                        Fair trade
+                        Vaccines
 
                     </h4>
 
@@ -140,33 +143,42 @@ section{
 
             padding: 100px 0 200px;
 
-            
+            .my-card{
+                
+                background:none;
+                border: none;
+                margin-bottom: 10px;
+                img{
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    
+                }
+                
 
                 .card-hover{
 
                     display: none;
                     position: absolute;
                     top: 0;
-                    left: 0;
-                    width: 100%;
+                    left: 3%;
+                    width: 94%;
                     height: 100%;
 
+                    h4{
+                        margin-top:calc(50% - 50px);
+                        line-height: 20px;
+                        
+                    }
                     
-                }
-                .my-card{
-
-                background:none;
-                border: none;
-                img{
-
-                    width: 100%;
-                    height: 100%;
-                    display: block;
+                    
                 }
                 
                 &:hover .card-hover{
 
                     display: block;
+                    align-items: center;
                     background-color: rgba($color: $my-yellow, $alpha: 0.7);
                 }
 
