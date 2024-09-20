@@ -33,7 +33,7 @@ export default {
     <div class="d-flex flex-column button-right">
         <button class="p-2 text-secondary border-0 rounded-2 mb-2">
 
-          <i class="fa-solid fa-folder"></i>
+          <i class="fa-solid fa-folder fa-2xl"></i>
 
           <div>
             Prebuilts
@@ -43,7 +43,7 @@ export default {
 
         <button class="p-2 text-secondary border-0 rounded-2">
 
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
 
           <div>
             Buy Now
