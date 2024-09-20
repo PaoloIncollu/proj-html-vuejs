@@ -3,6 +3,7 @@ import SectionCounts from './SectionCounts.vue';
 import SectionCauses from './SectionCauses.vue';
 import SectionValues from './SectionValues.vue';
 import SectionArticles from './SectionArticles.vue';
+import SectionChangeLife from './SectionChangeLife.vue';
 export default {
   data() {
     return { 
@@ -14,7 +15,8 @@ export default {
     SectionCounts,
     SectionCauses,
     SectionValues,
-    SectionArticles
+    SectionArticles,
+    SectionChangeLife
   }
 }
 </script>
@@ -26,6 +28,7 @@ export default {
   <SectionValues/>
   <SectionCauses/>
   <SectionArticles/>
+  <SectionChangeLife/>
   
  </main>
 </template>
