@@ -22,7 +22,6 @@ export default {
       
         <h3 class="text-uppercase text-white ps-2">Avada Charity</h3>
       </div>
-
         
       <div class="list-page d-flex align-items-center">
         <ul class="d-flex flex-wrap align-items-center">
